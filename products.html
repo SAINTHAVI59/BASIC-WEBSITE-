@@ -1,0 +1,230 @@
+<html lang="en">
+<head>
+  <!-- AOS Scroll Library -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | Sainthavi Mart</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body class="products-page">
+  <header class="header">
+    <div class="logo">🛍️ Sainthavi Mart</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <!-- Category Filters -->
+  <section class="categories">
+    <h2>Shop by Category</h2>
+
+    <div class="category">
+      <h3>Electronics</h3>
+      <div class="subcategories">
+        <button class="filter-btn" data-category="phone">Phones</button>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>Clothing</h3>
+      <div class="subcategories">
+        <button class="filter-btn" data-category="womens">Women</button>
+        <button class="filter-btn" data-category="mens">Men</button>
+        <button class="filter-btn" data-category="kids">Kids</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="products" id="filtered-products">
+    <!-- PHONES -->
+    <div class="card" data-category="phone" data-aos="zoom-in">
+      <img src="assets/phone-realme.jpg" alt="Realme Phone">
+      <h3>Realme Narzo 60X</h3>
+      <p class="desc">128GB | AMOLED | Fast Charging</p>
+      <select class="product-size">
+        <option value="11999">128GB - ₹11,999</option>
+      </select>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="card" data-category="phone" data-aos="zoom-in">
+      <img src="assets/phone-samsung.jpg" alt="Samsung Phone">
+      <h3>Samsung Galaxy M14</h3>
+      <p class="desc">128GB | 50MP | 6000mAh</p>
+      <select class="product-size">
+        <option value="13999">128GB - ₹13,999</option>
+      </select>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="card" data-category="phone" data-aos="zoom-in">
+      <img src="assets/phone-iphone.jpg" alt="iPhone">
+      <h3>iPhone 13</h3>
+      <p class="desc">128GB | A15 Chip | 5G</p>
+      <select class="product-size">
+        <option value="59999">128GB - ₹59,999</option>
+      </select>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- WOMEN -->
+    <div class="card" data-category="womens" data-aos="zoom-in">
+      <img src="assets/womens-dress-party.jpg" alt="Party Dress">
+      <h3>Women's Party Dress</h3>
+      <p class="desc">Red | Sleeveless | Fit & Flare</p>
+      <select class="product-size">
+        <option value="899">M - ₹899</option>
+        <option value="949">L - ₹949</option>
+      </select>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="card" data-category="womens" data-aos="zoom-in">
+      <img src="assets/womens-kurti.jpg" alt="Kurti">
+      <h3>Cotton Printed Kurti</h3>
+      <p class="desc">Ethnic | Soft Fabric | Summer Wear</p>
+      <select class="product-size">
+        <option value="599">M - ₹599</option>
+        <option value="649">L - ₹649</option>
+      </select>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="card" data-category="womens" data-aos="zoom-in">
+      <img src="assets/womens-boho.jpg" alt="Boho Dress">
+      <h3>Boho Style Maxi Dress</h3>
+      <p class="desc">Floral Print | Free Size</p>
+      <select class="product-size">
+        <option value="799">Free Size - ₹799</option>
+      </select>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="card" data-category="womens" data-aos="zoom-in">
+      <img src="assets/womens-dress-party2.jpg" alt="Party Dress 2">
+      <h3>Shimmer Bodycon Dress</h3>
+      <p class="desc">Stretch Fit | Night Wear</p>
+      <select class="product-size">
+        <option value="999">M - ₹999</option>
+        <option value="1049">L - ₹1049</option>
+      </select>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- MENS -->
+    <div class="card" data-category="mens" data-aos="zoom-in">
+      <img src="assets/mens-formal.jpg" alt="Formal Shirt">
+      <h3>Men's Formal Shirt</h3>
+      <p class="desc">Cotton | Office Wear</p>
+      <select class="product-size">
+        <option value="699">M - ₹699</option>
+        <option value="749">L - ₹749</option>
+      </select>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="card" data-category="mens" data-aos="zoom-in">
+      <img src="assets/mens-denim.jpg" alt="Denim Jacket">
+      <h3>Denim Jacket</h3>
+      <p class="desc">Slim Fit | Casual Style</p>
+      <select class="product-size">
+        <option value="1199">M - ₹1199</option>
+        <option value="1299">L - ₹1299</option>
+      </select>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="card" data-category="mens" data-aos="zoom-in">
+      <img src="assets/mens-tshirt.jpg" alt="T-shirt">
+      <h3>Graphic T-shirt</h3>
+      <p class="desc">100% Cotton | Printed</p>
+      <select class="product-size">
+        <option value="499">M - ₹499</option>
+        <option value="549">L - ₹549</option>
+      </select>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- KIDS -->
+    <div class="card" data-category="kids" data-aos="zoom-in">
+      <img src="assets/kids-hoodie.jpg" alt="Kids Hoodie">
+      <h3>Winter Hoodie Set</h3>
+      <p class="desc">Hoodie + Joggers | Warm & Cozy</p>
+      <select class="product-size">
+        <option value="599">S - ₹599</option>
+        <option value="649">M - ₹649</option>
+      </select>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="card" data-category="kids" data-aos="zoom-in">
+      <img src="assets/kids-ethnic.jpg" alt="Ethnic Wear">
+      <h3>Ethnic Kurta Set</h3>
+      <p class="desc">Festive Wear | Boys</p>
+      <select class="product-size">
+        <option value="699">S - ₹699</option>
+        <option value="749">M - ₹749</option>
+      </select>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="card" data-category="kids" data-aos="zoom-in">
+      <img src="assets/kids-frock.jpg" alt="Frock">
+      <h3>Girls Party Frock</h3>
+      <p class="desc">Frill | Birthday Outfit</p>
+      <select class="product-size">
+        <option value="799">XS - ₹799</option>
+        <option value="849">S - ₹849</option>
+      </select>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+  </section>
+
+  <script>
+    // Filter Logic
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const category = btn.dataset.category;
+        productCards.forEach(card => {
+          card.style.display = card.dataset.category === category ? 'block' : 'none';
+        });
+      });
+    });
+
+    // Cart Logic
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    document.querySelectorAll('.add-to-cart').forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        const card = btn.closest('.card');
+        const name = card.querySelector('h3').innerText;
+        const selectedOption = card.querySelector('select').selectedOptions[0];
+        const price = parseInt(selectedOption.value);
+        const size = selectedOption.innerText;
+        cart.push({ name, price, size });
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${name} (${size}) added to cart!`);
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout | Janani Mart</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    .checkout {
+      max-width: 600px;
+      margin: 60px auto;
+      background: #fdf9f9;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.08);
+    }
+    .checkout h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+      text-align: center;
+      color: #46244c;
+    }
+    .checkout label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 500;
+    }
+    .checkout input,
+    .checkout textarea,
+    .checkout select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .checkout textarea {
+      height: 100px;
+    }
+    .checkout .btn {
+      margin-top: 25px;
+      background: #a067c4;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1rem;
+    }
+    .checkout .btn:hover {
+      background: #8f55b0;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">🛍️ Janani Mart</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </header>
+
+  <section class="checkout" data-aos="fade-right">
+    <h2>Checkout</h2>
+    <form id="checkoutForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" required>
+
+      <label for="address">Delivery Address</label>
+      <textarea id="address" required></textarea>
+
+      <label for="payment">Payment Method</label>
+      <select id="payment" required>
+        <option value="">-- Select --</option>
+        <option value="cod">Cash on Delivery</option>
+        <option value="upi">UPI</option>
+        <option value="card">Credit/Debit Card</option>
+      </select>
+
+      <button type="submit" class="btn">Place Order</button>
+    </form>
+  </section>
+
+  <script>
+    const form = document.getElementById('checkoutForm');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert("✅ Order placed successfully! We'll contact you soon.");
+      form.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <href="carting.html></href>"</href>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart | Janani Mart</title>
+
+  <!-- ✅ THIS IS CRUCIAL -->
+  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ✅ HEADER - shared across all pages -->
+  <header class="header">
+    <div class="logo">🛍️ Janani Mart</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <!-- ✅ THE MISSING PART: Proper wrapper -->
+  <main class="cart-page" id="cartContainer">
+    <h2>Your Shopping Cart</h2>
+    <div id="cartItems"></div>
+    <div class="cart-total" id="cartTotal">Total: ₹0</div>
+    <a href="products.html" class="btn-back">← Back to Shopping</a>
+  </main>
+
+  <!-- Shown when cart is empty -->
+  <div class="empty-cart" id="emptyMessage" style="display: none;">
+    🛒 Your cart is empty.
+  </div>
+
+  <!-- ✅ JS to handle cart functionality -->
+  
+</body>
+</html>

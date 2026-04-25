@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- AOS Scroll Library -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sainthavi Mart</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="logo">🛒 Sainthavi Mart</div>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#contact">Contact</a>
+      <a href="products.html">Products</a>
+      
+    </nav>
+  </header>
+
+  
+
+
+  <!-- ===== HERO SECTION ===== -->
+
+  <section class="hero" data-aos="fade-up">
+    <div class="hero-content">
+      <h1>Find Everything You Need</h1>
+      <p class="animated-text"></p>
+      <button class="btn" onclick="window.location.href='products.html'">Start Shopping</button>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS SECTION ===== -->
+  <section class="products" id="shop">
+    <h2 class="section-title">Popular Products</h2>
+    <div class="product-grid">
+
+      <div class="card">
+        <img src="assets/product1.jpg" alt="Handmade Candle" />
+        <h3>Handmade Candle</h3>
+        <p class="desc">Elegant aroma for cozy nights</p>
+        <span class="price">₹299</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/product2.jpg" alt="Eco Gift Box" />
+        <h3>Eco Gift Box</h3>
+        <p class="desc">Sustainable & thoughtful packaging</p>
+        <span class="price">₹549</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/product3.jpg" alt="Printed Tote Bag" />
+        <h3>Printed Tote Bag</h3>
+        <p class="desc">Trendy, reusable, and eco-friendly</p>
+        <span class="price">₹399</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/product4.jpg" alt="Minimal Mug Set" />
+        <h3>Minimal Mug Set</h3>
+        <p class="desc">Sleek design for your coffee moments</p>
+        <span class="price">₹699</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/product5.jpg" alt="Decor Candle Light" />
+        <h3>Decor Candle Light</h3>
+        <p class="desc">Adds warm ambiance to any space</p>
+        <span class="price">₹459</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/product6.jpg" alt="Eco-Friendly Storage Box" />
+        <h3>Eco-Friendly Storage Box</h3>
+        <p class="desc">Organize beautifully and sustainably</p>
+        <span class="price">₹499</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact" id="contact">
+    <h2>Get in Touch</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea rows="4" placeholder="Your Message..." required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" data-aos="fade-up">
+    <p>&copy; 2025 sainthavi Mart. Designed with ❤️</p>
+  </footer>
+
+  <a href="cart.html" class="cart-icon">
+  🛒 <span id="cart-count">0</span>
+</a>
+
+
+  
+<script src="script.js"></script>
+
+<script>
+  const textElement = document.querySelector('.animated-text');
+  const phrases = [
+    "Curated collection. Best deals. Always available. ",
+    "Women | Kids | Mens |  Electronics | More ",
+    "sainthavi Mart – Your Smart Shopping Partner  "
+  ];
+  
+  let i = 0;
+  let j = 0;
+  let isDeleting = false;
+  let currentPhrase = "";
+  let typingSpeed = 100;
+
+  function typeEffect() {
+    const fullPhrase = phrases[i];
+
+    if (isDeleting) {
+      currentPhrase = fullPhrase.substring(0, j--);
+    } else {
+      currentPhrase = fullPhrase.substring(0, j++);
+    }
+
+    textElement.textContent = currentPhrase;
+
+    if (!isDeleting && j === fullPhrase.length) {
+      isDeleting = true;
+      typingSpeed = 1200; // Pause before deleting
+    } else if (isDeleting && j === 0) {
+      isDeleting = false;
+      i = (i + 1) % phrases.length;
+      typingSpeed = 300; // Pause before typing next
+    } else {
+      typingSpeed = isDeleting ? 50 : 100;
+    }
+
+    setTimeout(typeEffect, typingSpeed);
+  }
+
+  // Start typing loop
+  typeEffect();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+
+</body>
+</html>
